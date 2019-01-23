@@ -65,7 +65,6 @@ public class RouteSearchParameters {
     private int[] _avoidCountries = null;
     private BordersExtractor.Avoid _avoidBorders = BordersExtractor.Avoid.NONE;
 
-//  TAKB: parameters weight factor and share factor seem to be ignored by the algorithm, further testing required.
     private int _alternativeRoutes = -1;
     private double _alternativeRoutesWeightFactor = 1.4;
     private double _alternativeRoutesShareFactor = 0.6;
@@ -433,6 +432,7 @@ public class RouteSearchParameters {
             } catch (Exception ex) {
                 throw new ParameterValueException(RoutingErrorCodes.INVALID_PARAMETER_FORMAT, "alternative_routes", json.getString("alternative_routes"));
             }
+<<<<<<< HEAD
             if (json.has("alternative_routes_weight_factor")) {
                 try {
                     _alternativeRoutesWeightFactor = json.getDouble("alternative_routes_weight_factor");
@@ -447,6 +447,8 @@ public class RouteSearchParameters {
                     throw new ParameterValueException(RoutingErrorCodes.INVALID_PARAMETER_FORMAT, "alternative_routes_share_factor", json.getString("alternative_routes_share_factor"));
                 }
             }
+=======
+>>>>>>> added search option alternative_routes, added RouteResult processing for GHResponse with multiple paths, minor refactoring in RouteResultBuilder and  RoutingRequestProcessor
         }
 
     }
