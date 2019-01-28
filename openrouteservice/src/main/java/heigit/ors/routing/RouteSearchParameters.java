@@ -65,14 +65,9 @@ public class RouteSearchParameters {
     private int[] _avoidCountries = null;
     private BordersExtractor.Avoid _avoidBorders = BordersExtractor.Avoid.NONE;
 
-<<<<<<< HEAD
-//  TAKB: parameters weight factor and share factor seem to be ignored by the algorithm, further testing required.
     private int _alternativeRoutes = -1;
     private double _alternativeRoutesWeightFactor = 1.4;
     private double _alternativeRoutesShareFactor = 0.6;
-=======
-    private int _alternativeRoutes = -1;
->>>>>>> 6c967b42... added search option alternative_routes, added RouteResult processing for GHResponse with multiple paths, minor refactoring in RouteResultBuilder and  RoutingRequestProcessor
 
     private String _options;
 
@@ -183,7 +178,6 @@ public class RouteSearchParameters {
         this._alternativeRoutes = _alternativeRoutes;
     }
 
-<<<<<<< HEAD
     public double getAlternativeRoutesWeightFactor() {
         return _alternativeRoutesWeightFactor;
     }
@@ -200,8 +194,6 @@ public class RouteSearchParameters {
         this._alternativeRoutesShareFactor = _alternativeRoutesShareFactor;
     }
 
-=======
->>>>>>> 6c967b42... added search option alternative_routes, added RouteResult processing for GHResponse with multiple paths, minor refactoring in RouteResultBuilder and  RoutingRequestProcessor
     public String getOptions() {
         return _options;
     }
